@@ -1,9 +1,6 @@
-import dynamic from 'next/dynamic';
+'use client';
 
-const GpuExperience = dynamic(() => import('../components/GpuExperience'), {
-  ssr: false,
-  loading: () => <div className="loading-state">Loading the silicon…</div>,
-});
+import GpuExperience from '../components/GpuExperience';
 
 export default function Page() {
   return <GpuExperience />;
